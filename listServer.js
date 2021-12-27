@@ -434,6 +434,12 @@ async function removeOldServers() {
 
 removeOldServers();
 
+const cors = require("cors")
+expressApp.use(
+	cors({
+		origin: "*"
+	})
+)
 
 // -- Start the application -- //
 // Coburn: Moved the actual startup routines here to help boost Codacy's opinion.
